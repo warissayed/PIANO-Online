@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Caprasimo&family=Cedarville+Cursive&family=Pacifico&family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,600;1,200&family=Ubuntu:ital@1&family=Varela+Round&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+
+}
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 120vh;
+  background: rgb(119, 53, 224);
+}
+.head{
+  background-color: rgb(19, 17, 17);
+  width: 780px;
+  border-radius: 15px;
+  padding: 35px 40px;
+}
+.head h2{
+  font-size: 1.7rem;
+} 
+
+header .column{
+  display: flex;
+  align-items: center;
+ 
+}
+header .column span{
+  font-weight: 500;
+  margin-right: 15px;
+  font-size: 1.2rem;
+}
+.head header{
+  color: rgb(119, 53, 224);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+}
+.volume-slider input{
+  accent-color: rgb(109, 58, 190);
+  cursor: pointer;
+  outline: none;
+}
+.key-checkbox input{
+  width: 60px;
+  height: 30px;
+  outline: none;
+  appearance: none;
+  cursor: pointer;
+  position: relative;
+  accent-color: rgb(119, 53, 224);
+  background-color: rgb(169, 96, 241);
+  border-radius: 30px;
+}
+.key-checkbox input::before{
+  content: "";
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  background-color: rgb(255, 255, 255);
+  border-radius: inherit;
+  transform: translateY(-50%);
+  transition: all 0.3s ease;
+}
+.key-checkbox input:checked::before{
+  left: 35px;
+  background-color: rgb(0, 0, 0);
+}
+
+.piano-keys {
+  display: flex;
+  margin-top: 40px;
+  background-color: rgb(12, 10, 10);
+  
+}
+.piano-keys .key{
+  cursor: pointer;
+  position: relative;
+  user-select: none;
+  list-style: none;
+  color: rgb(119, 53, 224);
+  text-transform: uppercase;
+}
+.piano-keys .white{
+  width: 70px;
+  height: 230px;
+  border-radius: 8px;
+  border: 1px solid #000;
+  background: linear-gradient(#fff 96%,#eee 4%);
+}
+.piano-keys .black{
+  width: 44px;
+  height: 140px;
+  z-index: 2;
+  margin: 0 -22px 0 -22px;
+  border-radius: 0 0 5px 5px;
+  background: linear-gradient(#333,#000);
+}
+.piano-keys span{
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  font-size: 1.23rem;
+  text-align: center;
+
+}
+.piano-keys .white.active{
+  box-shadow: -5px 5px 20px rgb(255, 255, 255,0.1);
+  background: linear-gradient(to bottom,#9b9898,#8d8989);
+}
+.piano-keys .black.active{
+  box-shadow: -5px 5px 20px rgb(255, 255, 255,0.1);
+  background: linear-gradient(to bottom,#000,#434343);
+}
+.piano-keys .key.hide span{
+  display: none;
+}
+
+
